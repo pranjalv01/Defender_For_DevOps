@@ -10,6 +10,12 @@ jobs:
     steps:
         - name: Checkout
           uses: actions/checkout@v2
+          
+        - uses: actions/setup-dotnet@v1
+          with:
+            dotnet-version: |
+              5.0.x
+              6.0.x
 
         # Run MSDO analyzers
         - name: Run Microsoft Security DevOps Analysis
